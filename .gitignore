@@ -8,6 +8,7 @@ old/
 # Large data files
 *.csv
 !sample_data.csv
+!training_data.csv
 
 # Python
 __pycache__/
