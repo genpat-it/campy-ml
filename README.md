@@ -116,6 +116,18 @@ The current model (`modello_xgb_jejuni_coli_pubmlst_IZS_v2.pkl`) features:
 
 The repository includes `data/sample_data.csv` with 10 test samples for immediate experimentation.
 
+## Data Sources
+
+The training approach is based on the pubMLST database methodology described in:
+
+> Arning N, Sheppard SK, Bayliss S, Clifton DA, Wilson DJ (2021) **Machine learning to predict the source of campylobacteriosis using whole genome data.** *PLoS Genet* 17(10): e1009436. https://doi.org/10.1371/journal.pgen.1009436
+
+**Dataset characteristics:**
+- 5,799 C. jejuni and C. coli genomes from pubMLST
+- Sources: chicken (4,147), cattle (716), sheep (584), wild bird (212), environment (140)
+- cgMLST approach with 1,343 core genes for enhanced accuracy
+- Public data available at: https://pubmlst.org/bigsdb?db=pubmlst_campylobacter_isolates&page=query&project_list=102&submit=1
+
 ## Credits
 
 **Developer**: Laura Di Egidio (Master's thesis project)
