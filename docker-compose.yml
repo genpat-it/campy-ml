@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  campyml:
+    build: .
+    container_name: campyml-model
+    volumes:
+      # Monta la directory locale per accesso ai dati e salvataggio risultati
+      - ./:/app/data
+      - ./output:/app/output
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Comando di default - può essere sovrascritto con docker-compose run
+    command: ["--help"]
+
+# Esempi di utilizzo:
+#
+# 1. Build dell'immagine:
+#    docker-compose build
+#
+# 2. Training del modello:
+#    docker-compose run --rm campyml --mode train --data data/merged_files.csv --model output/model.pkl
+#
+# 3. Prediction:
+#    docker-compose run --rm campyml --mode predict --data data/test_data.csv --model output/model.pkl --output output/predictions.csv
+#
+# 4. Training con parametri personalizzati:
+#    docker-compose run --rm campyml --mode train --data data/merged_files.csv --target source --model output/custom_model.pkl
